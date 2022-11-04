@@ -1,10 +1,12 @@
 import express from 'express';
 
-import "./database";
+import { connectDB } from "./database/index";
 
 import { router } from "./routes";
 
 const app = express();
+
+connectDB();
 
 app.use(express.json());
 
